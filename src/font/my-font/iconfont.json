@@ -1,0 +1,30 @@
+{
+  "id": "1435507",
+  "name": "day10喵喵",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "156388",
+      "name": "影院A",
+      "font_class": "yingyuana",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "2087544",
+      "name": "电影",
+      "font_class": "dianying",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5288587",
+      "name": "垃圾桶",
+      "font_class": "lajitong",
+      "unicode": "e66b",
+      "unicode_decimal": 58987
+    }
+  ]
+}

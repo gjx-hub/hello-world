@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 通过 npm 安装
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
     entry: path.join(__dirname, 'src/main.js'),
     output: {
@@ -7,18 +8,12 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        open:true,
+        open: true,
         // contentBase:'src',
-        port:3000,
-        hot:true
+        port: 3000,
+        hot: true
     },
-    rules: [
-        // ... 其它规则
-        {
-            test: /\.vue$/,
-            loader: 'vue-loader'
-        }
-    ],
+
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
@@ -26,5 +21,20 @@ module.exports = {
 
         }),
         new VueLoaderPlugin()
-    ]
+    ],
+    module: {
+        // 配置的loader解析的规则
+        rules: [{
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }, {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            }, {
+                test: /\.(ttf|woff|eot|svg|woff2)$/,
+                loader: 'url-loader'
+            }
+        ]
+
+    }
 }
