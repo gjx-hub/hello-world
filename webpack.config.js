@@ -11,12 +11,18 @@ module.exports = {
         open: true,
         // contentBase:'src',
         port: 3000,
-        hot: true
+        hot: true,
+        proxy:{
+            '/api':{
+                target:'http://39.97.33.178',
+                changeOrgin:true
+            }
+        }
     },
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: path.join(__dirname,'src/index.html'),//为什么修改这？
             filename: 'index.html',
 
         }),
@@ -45,3 +51,6 @@ module.exports = {
         }
     }
 }
+
+
+

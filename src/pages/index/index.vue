@@ -1,6 +1,6 @@
 <template>
     <div>
-        这是首页组件
+        <!-- 这是首页组件 -->
         <tab></tab>
         <router-view></router-view>
     </div>

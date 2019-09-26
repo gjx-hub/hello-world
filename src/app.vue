@@ -26,7 +26,8 @@
 export default {
   data() {
     return {
-      selected: "movie"
+      selected: "movie",
+      title:"喵喵电影"
     };
   },
   created() {
@@ -58,7 +59,7 @@ export default {
 </script>
 <style lang='less' scoped>
 .content {
-  background-color: aqua;
+  background-color: wheat;
   height: calc(100vh - 95px);
   margin-top: 40px;
   width: 100%;
