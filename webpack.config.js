@@ -25,16 +25,23 @@ module.exports = {
     module: {
         // 配置的loader解析的规则
         rules: [{
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            }, {
-                test: /\.vue$/,
-                loader: 'vue-loader'
-            }, {
-                test: /\.(ttf|woff|eot|svg|woff2)$/,
-                loader: 'url-loader'
-            }
-        ]
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        }, {
+            test: /\.vue$/,
+            loader: 'vue-loader'
+        }, {
+            test: /\.(ttf|woff|eot|svg|woff2)$/,
+            loader: 'url-loader'
+        }, {
+            test: /\.less$/,
+            loader: ['style-loader', 'css-loader', 'less-loader']
+        }]
 
+    },
+    resolve:{
+        alias:{
+            '@':path.join(__dirname,'src')
+        }
     }
 }

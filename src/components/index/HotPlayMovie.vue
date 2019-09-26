@@ -1,8 +1,7 @@
 <template>
-    <div >
-        这是影院组件
-    </div>
+    <div>正在热映</div>
 </template>
+
 <script>
 export default {
     
